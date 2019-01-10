@@ -1,1 +1,1 @@
-# vue-js-interm
+# vue-js-template

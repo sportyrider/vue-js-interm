@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>First Vue App</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/vue"></script>
+    
+  </head>
+
+  <body>
+    <div class="nav-bar">
+      <ul>
+        <li><a href="">Home</a></li>
+
+        <li><a href="">Listing</a></li>
+      </ul>
+    </div>
+
+    <div id="app">
+      <div>You have {{orders.length}} pending order(s) with {{specialOrders}} special(s).</div>
+      <div class="content">
+        <div class="content-info content-info-a">
+          <h4>Create New Order:</h4>
+          <leftside :min="min" @order-submitted="addOrder"></leftside>
+        </div>
+
+        <div class="content-info content-info-a">
+          <h4 v-if="orders.length">Pending Orders:</h4>
+          <rightside :orders="orders"></rightside>
+        </div>
+      </div>
+    </div>
+   
+    <script src="main-vue-app.js"></script>
+  </body>
+</html>
